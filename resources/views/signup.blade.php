@@ -26,7 +26,9 @@
                 <div class="form-outline mb-4">
                   <input type="email" id="email" class="form-control" placeholder="Email" />                    
                 </div>
-                <button type="button" class="btn btn-primary btn-block mb-4" style="width: 100%">Sign up</button>
+                <a href="/">
+                  <button type="button" class="btn btn-primary btn-block mb-4" style="width: 100%">Sign up</button>
+                </a>
               </div>    
             </div>
           </div>

@@ -12,10 +12,11 @@
 </head>
 <style>
 .skats {
-background: linear-gradient(to right, rgb(7, 93, 119), rgb(41, 2, 77))
+background: linear-gradient(to right, rgb(7, 74, 95), rgb(41, 2, 77))
 }
 </style>
 <body class = "skats">
+    
     @yield('content')
 </body>
 </html>

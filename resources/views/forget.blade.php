@@ -7,20 +7,16 @@
           <div class="card" style="color: #4B515D; border-radius: 35px;">
             <div class="card-body p-4">
               <div class="d-flex" style = "justify-content: center;">
-                <h1>Login</h1>
+                <h1>Password recovery</h1>
               </div> 
-              <div>
+              <div>  
                 <div class="form-outline mb-4">
-                  <input type="email" id="email" class="form-control" placeholder="Email or username" />                    
+                  <input type="email" id="email" class="form-control" placeholder="Email" />                    
                 </div>
-                <div class="form-outline mb-4">
-                  <input type="password" id="password" class="form-control" placeholder="Password" />
-                </div>
-                <a href="/">
-                  <button type="button" class="btn btn-primary btn-block mb-4" style="width: 100%">Login</button>
+                <a href="/recovery_code">
+                    <button type="button" class="btn btn-primary btn-block mb-4" style="width: 100%">Get code</button>
                 </a>
-                <p>Don't have an account? <a href="\signup"> Sign up</a></p>
-                <p>Forgot <a href="\forget"> password?</a></p>
+                
               </div>    
             </div>
           </div>
