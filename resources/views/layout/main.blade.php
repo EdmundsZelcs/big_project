@@ -15,7 +15,7 @@
 </head>
 <style>
 .skats {
-background: linear-gradient(to right, rgb(7, 74, 95), rgb(41, 2, 77))
+background: linear-gradient(to right, rgb(35, 46, 153), rgb(55, 6, 102))
 }
 </style>
 <body class = "skats">

@@ -3,10 +3,25 @@
 <body>
 <style>
 #songs{
-    color: white;
+    /* color: white; */
 }
 #row{
     display: flex;
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+#songs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card-body {
+  padding: 2px 16px;
 }
 </style>
 <div class="row">
@@ -16,11 +31,10 @@
     </div>
 </div>
     
-    
 
 <div id='songs'>
-
 </div>
+
 <script>
 $("#search").on("click", function(){
     var name = $("#singerName").val();
@@ -28,7 +42,6 @@ $("#search").on("click", function(){
     search(url);
 });
 
-// $(document).ready(function(){
     function search(url){
         let settings = {
         "async": true,
@@ -36,21 +49,25 @@ $("#search").on("click", function(){
         "url": url,
         "method": "GET",
         "headers": {
-            "X-RapidAPI-Key": "81cab233dfmshe882d2f6381eb5cp134584jsn6b012dfb0de1",
+            "X-RapidAPI-Key": "12f857626emsh1590a9529544646p125c31jsn95f7514f722f",
 		    "X-RapidAPI-Host": "genius-song-lyrics1.p.rapidapi.com"
         }
     }
     $.ajax(settings).done(function (res) {
         console.log(res);
+        $('#songs').empty()
         for(let i = 0; i < res.response.hits.length; ++i){
-            $("#songs").append(`<h3>${res.response.hits[i].result.artist_names}</h3><h1>${res.response.hits[i].result.title}</h1><img src='${res.response.hits[i].result.header_image_thumbnail_url}'></img>`)
+            $("#songs").append(
+                `<div class="card" style="width: 18rem;">
+                <img src="${res.response.hits[i].result.header_image_thumbnail_url}" class="card-img-top">
+                <div class="card-body">
+                   <h5 class="card-title" >${res.response.hits[i].result.title}</h5>
+                   <p class="card-text">${res.response.hits[i].result.artist_names}</p>
+            </div>
+        </div>`
+            )
         }
     })
 }
-    
-// });
-
-    
-    
 </script>
 @endsection
