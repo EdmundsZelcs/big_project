@@ -59,7 +59,7 @@ $("#search").on("click", function(){
         for(let i = 0; i < res.response.hits.length; ++i){
             $("#songs").append(
                 `<div class="card" style="width: 18rem;">
-                <img src="${res.response.hits[i].result.header_image_thumbnail_url}" class="card-img-top">
+                <a href="/song/${res.response.hits[i].result.id}"><img src="${res.response.hits[i].result.header_image_thumbnail_url}" class="card-img-top"></a>
                 <div class="card-body">
                    <h5 class="card-title" >${res.response.hits[i].result.title}</h5>
                    <p class="card-text">${res.response.hits[i].result.artist_names}</p>
