@@ -2,27 +2,26 @@
 @section('content')
 <body>
 <style>
-#songs{
-    /* color: white; */
+#bilde{
+    width: 360px;
+    height: 360px;
 }
 #row{
     display: flex;
-}
-.card{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 #songs{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.card-body {
-  padding: 2px 16px;
+.box {
+  margin: 10% auto;
+  position:relative;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
 }
+
 </style>
 <div class="row">
     <div class="col-lg-4 offset-4 " id="row">
@@ -49,7 +48,7 @@ $("#search").on("click", function(){
         "url": url,
         "method": "GET",
         "headers": {
-            "X-RapidAPI-Key": "12f857626emsh1590a9529544646p125c31jsn95f7514f722f",
+            "X-RapidAPI-Key": "8b158c4bc7msh8b0b0c20d9caeeep1a8805jsna499c47353c4",
 		    "X-RapidAPI-Host": "genius-song-lyrics1.p.rapidapi.com"
         }
     }
@@ -58,13 +57,18 @@ $("#search").on("click", function(){
         $('#songs').empty()
         for(let i = 0; i < res.response.hits.length; ++i){
             $("#songs").append(
-                `<div class="card" style="width: 18rem;">
-                <a href="/song/${res.response.hits[i].result.id}"><img src="${res.response.hits[i].result.header_image_thumbnail_url}" class="card-img-top"></a>
-                <div class="card-body">
-                   <h5 class="card-title" >${res.response.hits[i].result.title}</h5>
-                   <p class="card-text">${res.response.hits[i].result.artist_names}</p>
-            </div>
-        </div>`
+                `<div class="box">
+    <div id="card-container">
+      <div id="card">
+        <div class="front face">
+            <a href="/song/${res.response.hits[i].result.id}"><img src="${res.response.hits[i].result.header_image_thumbnail_url}" class="card-img-top" id = "bilde"></a>
+        </div>
+        <div class="back face">
+          <h1>${res.response.hits[i].result.title}</h1>
+          <h5>${res.response.hits[i].result.artist_names}</h5>
+        </div>
+      </div>
+    </div>`
             )
         }
     })
