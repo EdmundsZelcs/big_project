@@ -48,7 +48,7 @@ $("#search").on("click", function(){
         "url": url,
         "method": "GET",
         "headers": {
-            "X-RapidAPI-Key": "8b158c4bc7msh8b0b0c20d9caeeep1a8805jsna499c47353c4",
+            "X-RapidAPI-Key": "693b90f959mshb717bb10cf3d94dp175520jsn8ac4770b9cbd",
 		    "X-RapidAPI-Host": "genius-song-lyrics1.p.rapidapi.com"
         }
     }
