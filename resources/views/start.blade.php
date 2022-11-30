@@ -13,6 +13,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+        flex-direction: column;
 }
 .box {
   margin: 10% auto;
@@ -48,7 +49,7 @@ $("#search").on("click", function(){
         "url": url,
         "method": "GET",
         "headers": {
-            "X-RapidAPI-Key": "693b90f959mshb717bb10cf3d94dp175520jsn8ac4770b9cbd",
+            "X-RapidAPI-Key": "b26019582bmshb3a281caa0795d4p14e29djsn9aab39c84c7f",
 		    "X-RapidAPI-Host": "genius-song-lyrics1.p.rapidapi.com"
         }
     }
