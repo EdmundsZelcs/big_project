@@ -20,7 +20,24 @@
 	.large-font {
 		font-size: 60px;
 	}
-	
+	.player{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-top: 150px;
+	}
+	#audio{
+		background-color: whitesmoke;
+		border-bottom-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+		width: 20%;
+	}
+	#image{
+		height: 400px;
+		width: 385px;
+		border-top-right-radius: 30px;
+		border-top-left-radius: 30px;
+	}
 	</style>
 
 
@@ -28,7 +45,7 @@
 	<div class="imgbox">
 	  <img id="image"/>
    </div>
-	<audio src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/02/c6/07/02c607ce-db8e-78c7-a470-9ecacdba1fd9/mzaf_8261651039021930979.plus.aac.p.m4a"  controls></audio>
+	<audio id = "audio" src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/9b/b7/14/9bb71498-9853-7fc5-8b5a-8797a7379726/mzaf_15787296561849039166.plus.aac.p.m4a"   controls></audio>
  </div>
  
 	<script>
