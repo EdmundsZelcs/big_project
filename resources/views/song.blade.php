@@ -56,7 +56,7 @@
 		"url": "https://genius-song-lyrics1.p.rapidapi.com/songs/"+parseInt({{$id}}),
 		"method": "GET",
 		"headers": {
-			"X-RapidAPI-Key": "b26019582bmshb3a281caa0795d4p14e29djsn9aab39c84c7f",
+			"X-RapidAPI-Key": "7514a35fbdmsh7fd21a0d30989b7p166452jsn3f7acea208d9",
 			"X-RapidAPI-Host": "genius-song-lyrics1.p.rapidapi.com"
 		}
 	};
