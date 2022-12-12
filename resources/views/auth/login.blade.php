@@ -28,4 +28,11 @@
       </div>
     </div>
   </section>
+
+  @if ($errors -> any())
+  @foreach ($errors -> all() as $error)
+    <li>{{ $error }}</li>
+  @endforeach
+  @endif
+
 @endsection

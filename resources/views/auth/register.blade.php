@@ -24,6 +24,9 @@
                   <input type="password" id="password" class="form-control" placeholder="Password" />
                 </div>
                 <div class="form-outline mb-4">
+                  <input name = 'password_confirmation' type="password" id="password_confirmation" class="form-control" placeholder="Confirm Password" />
+                </div>
+                <div class="form-outline mb-4">
                   <input type="email" id="email" class="form-control" placeholder="Email" />                    
                 </div>
                 <a href="/">
@@ -36,4 +39,11 @@
       </div>
     </div>
   </section>
+
+    @if ($errors -> any())
+    @foreach ($errors -> all() as $error)
+      <li>{{ $error }}</li>
+    @endforeach
+    @endif
+
 @endsection

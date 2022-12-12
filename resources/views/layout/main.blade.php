@@ -29,7 +29,7 @@ background: linear-gradient(to right, rgb(12, 13, 58), rgb(9, 7, 104),  rgb(47, 
                 </div>
                 <div class="navbar-nav ms-auto">
                     <a href="/login" class="nav-item nav-link">Login</a>
-                    <a href="/signup" class="nav-item nav-link">Sign Up</a>
+                    <a href="/register" class="nav-item nav-link">Sign Up</a>
                 </div>
             </div>
         </div>

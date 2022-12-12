@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('genre_has_song', function (Blueprint $table) {
-            $table ->foreignID('ID') ->constrained('genre');
-            $table ->foreignID('ID') ->constrained('song');
+            $table ->foreignID('genreid') ->constrained('genre');
+            $table ->foreignID('songid') ->constrained('song');
         });
     }
 
