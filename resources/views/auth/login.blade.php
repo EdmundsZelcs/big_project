@@ -1,6 +1,7 @@
 @extends('layout/main')
 @section('content')
-<section class="vh-150">
+<section class="vh-150">  <form action="/login" method="post">
+  @csrf
     <div class="container py-5 h-100" >
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-md-8 col-lg-6 col-xl-4">
@@ -17,7 +18,7 @@
                   <input type="password" id="password" class="form-control" placeholder="Password" />
                 </div>
                 <a href="/">
-                  <button type="button" class="btn btn-primary btn-block mb-4" style="width: 100%">Login</button>
+                  <button type="submit" class="btn btn-primary btn-block mb-4" style="width: 100%">Login</button>
                 </a>
                 <p>Don't have an account? <a href="\signup"> Sign up</a></p>
                 <p>Forgot <a href="\forget"> password?</a></p>
@@ -26,12 +27,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </div></form>
   </section>
 
   @if ($errors -> any())
   @foreach ($errors -> all() as $error)
-    <li>{{ $error }}</li>
+    <li style = "color:white">{{ $error }}</li>
   @endforeach
   @endif
 
