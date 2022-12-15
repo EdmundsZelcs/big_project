@@ -16,7 +16,6 @@
                 <a href="/recovery_code">
                     <button type="button" class="btn btn-primary btn-block mb-4" style="width: 100%">Get code</button>
                 </a>
-                
               </div>    
             </div>
           </div>

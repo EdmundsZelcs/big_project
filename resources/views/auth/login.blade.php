@@ -8,32 +8,30 @@
           <div class="card" style="color: #4B515D; border-radius: 35px;">
             <div class="card-body p-4">
               <div class="d-flex" style = "justify-content: center;">
-                <h1>Login</h1>
+                <h1>Log in</h1>
               </div> 
               <div>
                 <div class="form-outline mb-4">
-                  <input type="email" id="email" class="form-control" placeholder="Email or username" />                    
+                  <input type="text" id="email" name = 'email' class="form-control" placeholder="Email" />                    
                 </div>
                 <div class="form-outline mb-4">
-                  <input type="password" id="password" class="form-control" placeholder="Password" />
+                  <input type="password" id="password" class="form-control" name = 'password' placeholder="Password" />
                 </div>
                 <a href="/">
-                  <button type="submit" class="btn btn-primary btn-block mb-4" style="width: 100%">Login</button>
+                  <button type="submit" class="btn btn-primary btn-block mb-4" style="width: 100%">Log in</button>
                 </a>
-                <p>Don't have an account? <a href="\signup"> Sign up</a></p>
-                <p>Forgot <a href="\forget"> password?</a></p>
               </div>    
             </div>
           </div>
         </div>
       </div>
-    </div></form>
+    </div>  </form>
   </section>
 
-  @if ($errors -> any())
-  @foreach ($errors -> all() as $error)
-    <li style = "color:white">{{ $error }}</li>
-  @endforeach
-  @endif
+    @if ($errors -> any())
+    @foreach ($errors -> all() as $error)
+      <li style = "color:white">{{ $error }}</li>
+    @endforeach
+    @endif
 
 @endsection

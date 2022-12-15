@@ -20,6 +20,7 @@ Route::get('/', function () {
     return view('start');
 });
 
+
 // Route::get('/login', function () {
 //     return view('login');
 // });
@@ -40,9 +41,7 @@ Route::get('/recovery_code', function () {
     return view('recovery_code');
 });
 
-Route::get("/home", function(){
-    // dd(Auth::user());
-});
+
 
 // Route::get('/song/{id}', function () {
 //     return view('song');
