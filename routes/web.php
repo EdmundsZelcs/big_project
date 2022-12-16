@@ -41,10 +41,4 @@ Route::get('/recovery_code', function () {
     return view('recovery_code');
 });
 
-
-
-// Route::get('/song/{id}', function () {
-//     return view('song');
-// });
-
 Route::get("/song/{id}",[Songs::class, "getSong"]);

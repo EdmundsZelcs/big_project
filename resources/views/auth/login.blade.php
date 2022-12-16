@@ -1,6 +1,6 @@
 @extends('layout/main')
 @section('content')
-<section class="vh-150">  <form action="/login" method="post">
+<section class="vh-150">  <form action="/login" method="POST">
   @csrf
     <div class="container py-5 h-100" >
       <div class="row d-flex justify-content-center align-items-center h-100">
