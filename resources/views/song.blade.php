@@ -45,9 +45,14 @@
 	<div class="imgbox">
 	  <img id="image"/>
    </div>
-	<audio id = "audio" src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/9b/b7/14/9bb71498-9853-7fc5-8b5a-8797a7379726/mzaf_15787296561849039166.plus.aac.p.m4a"   controls></audio>
+	<audio 
+		id="audio" 
+		src="{{ $song }}" 
+		controls>
+	</audio>
+	{{-- {{ dd($song) }} --}}
  </div>
- 
+
 	<script>
 	// <h1>{{$id}}</h1>
 	const settings = {
@@ -60,6 +65,7 @@
 			"X-RapidAPI-Host": "genius-song-lyrics1.p.rapidapi.com"
 		}
 	};
+
 	$.ajax(settings).done(function (res) {
 		console.log(res);
 		$("#image").attr("src",res.response.song.song_art_image_thumbnail_url)

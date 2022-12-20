@@ -62,7 +62,7 @@ $("#search").on("click", function(){
     <div id="card-container">
       <div id="card">
         <div class="front face">
-            <a href="/song/${res.response.hits[i].result.id}"><img src="${res.response.hits[i].result.header_image_thumbnail_url}" class="card-img-top" id = "bilde"></a>
+            <a href="/song/${res.response.hits[i].result.full_title}/${res.response.hits[i].result.id}"><img src="${res.response.hits[i].result.header_image_thumbnail_url}" class="card-img-top" id = "bilde"></a>
         </div>
         <div class="back face">
           <h1>${res.response.hits[i].result.title}</h1>
